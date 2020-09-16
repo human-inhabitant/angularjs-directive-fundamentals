@@ -1,0 +1,29 @@
+{
+  "name": "angularjs-directive-fundamentals",
+  "version": "0.6.5",
+  "description": "AngularJS Directives Fundamentals",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "bootstrap": "^3.4.1",
+    "jquery": "^1.12.4",
+    "angular": "^1.8.0"
+  },
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/human-inhabitant/angularjs-directive-fundamentals.git"
+  },
+  "keywords": [
+    "Pluralsight",
+    "AngularJS"
+  ],
+  "author": "human-inhabitant",
+  "license": "copyleft-next-0.3.1",
+  "bugs": {
+    "url": "https://github.com/human-inhabitant/angularjs-directive-fundamentals/issues"
+  },
+  "homepage": "https://github.com/human-inhabitant/angularjs-directive-fundamentals#readme"
+}
