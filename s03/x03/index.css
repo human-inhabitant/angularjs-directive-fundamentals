@@ -1,0 +1,26 @@
+/* 16px === 1rem */
+
+html, body {
+  font-family: "Source Code Pro", monospace;
+  padding: 0.625rem;
+}
+pre {
+  font-family: "Source Code Pro", monospace;
+  font-size: inherit;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+textarea {
+  resize: none;
+}
+:focus {
+  outline: 0;
+}
+
+.highlight {
+  color: rgba( 165, 0, 0, 0.7 );
+}

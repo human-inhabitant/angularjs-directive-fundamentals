@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title></title>
+  </head>
+  <body class="container" ng-controller="mainCtrl">
+
+    <video id="vid" spacebar-support event-pause="handlePause(evt)" controls preload="none"
+           poster="https://media.w3.org/2010/05/sintel/poster.png">
+      <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4" />
+      <source src="https://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm" />
+      <source src="https://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg" />
+    </video>
+    <div ng-repeat="message in messages">{{message.text}}</div>
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
