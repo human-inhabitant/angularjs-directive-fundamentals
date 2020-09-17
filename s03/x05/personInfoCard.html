@@ -1,6 +1,7 @@
-<div class="panel panel-primary">
+<div class="panel panel-info">
   <div class="panel-heading" ng-click="collapse()">
-    <span state-display="user.level user-ok user-warning user-problem user-error">{{user.name}}</span>
+    <span class="box" state-display="user.level user-ok user-warning user-problem user-error"></span>
+    {{user.name}}
   </div>
   <div class="panel-body" ng-hide="collapsed">
     <address></address>

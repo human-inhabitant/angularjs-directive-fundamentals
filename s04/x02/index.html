@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title></title>
+  </head>
+  <body class="container" ng-controller="mainCtrl">
+    <h1>Questions</h1>
+    {{answers.allsparkLocation}}
+    <my-question q="Where is the allspark...?">
+      <input type="text" ng-model="answers.allsparkLocation" />
+    </my-question>
+    <my-question q="Are you an Autobot...?">
+      <input type="radio" ng-value="true" ng-model="answers.autobot" /> Yes
+      <input type="radio" ng-value="false" ng-model="answers.autobot" /> No
+    </my-question>
+    <my-question q="Do you know where Optimus Prime is...?">
+      <button class="btn btn-xs btn-default">Yes</button>
+      <button class="btn btn-xs btn-default">No</button>
+    </my-question>
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

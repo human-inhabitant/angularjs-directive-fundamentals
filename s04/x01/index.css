@@ -1,0 +1,33 @@
+/* 16px === 1rem */
+
+html, body {
+  font-family: "Source Code Pro", monospace;
+  padding: 0.625rem;
+}
+pre {
+  font-family: "Source Code Pro", monospace;
+  font-size: inherit;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+textarea {
+  resize: none;
+}
+:focus {
+  outline: 0;
+}
+
+.well {
+  width: 21.875rem;
+}
+.well .close {
+  float: right;
+  margin-top: -0.9375rem;
+}
+.well .close i {
+  cursor: pointer;
+}

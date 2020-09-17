@@ -1,0 +1,42 @@
+/* 16px === 1rem */
+
+html, body {
+  font-family: "Source Code Pro", monospace;
+  padding: 0.625rem;
+}
+pre {
+  font-family: "Source Code Pro", monospace;
+  font-size: inherit;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+textarea {
+  resize: none;
+}
+:focus {
+  outline: 0;
+}
+
+.box {
+  border: thin solid rgba( 0, 0, 0, 0.2 );
+  border-radius: 0.345rem;
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+}
+.user-ok {
+  background-color: white;
+}
+.user-warning {
+  background-color: yellow;
+}
+.user-problem {
+  background-color: orange;
+}
+.user-error {
+  background-color: red;
+}
