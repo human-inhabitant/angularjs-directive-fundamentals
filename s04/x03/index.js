@@ -69,6 +69,35 @@
 
   angular
     .module( 'app' )
+    .directive( 'userPanel', userPanel )
+  ;
+  function userPanel() {
+    return {
+      restrict: 'E',
+      transclude: true,
+      templateUrl: 'userPanel.html',
+      scope: {
+        name: '@',
+        level: '=',
+        initialCollapsed: '@collapsed'
+      },
+      controller: function( $scope ) {
+        $scope.collapsed = ( $scope.initialCollapsed === 'true' );
+        $scope.collapse = () => {
+          $scope.collapsed = !$scope.collapsed;
+        };
+        $scope.nextState = function( evt ) {
+          evt.stopPropagation();
+          evt.preventDefault();
+          $scope.level++;
+          $scope.level = $scope.level % 4;
+        };
+      }
+    };
+  }
+
+  angular
+    .module( 'app' )
     .directive( 'personInfoCard', personInfoCard )
   ;
   function personInfoCard() {
@@ -80,12 +109,8 @@
         initialCollapsed: '@collapsed'
       },
       controller: function( $scope ) {
-        $scope.collapsed = ( $scope.initialCollapsed === 'true' );
-        $scope.knightMe = person => {
-          person.rank = 'knight';
-        };
-        $scope.collapse = () => {
-          $scope.collapsed = !$scope.collapsed;
+        $scope.jediMe = person => {
+          person.rank = 'Jedi';
         };
         $scope.removeFriend = friend => {
           const idx = $scope.person.friends.indexOf( friend );
@@ -93,10 +118,24 @@
             $scope.person.friends.splice( idx, 1 );
           }
         };
-        $scope.nextState = function() {
-          $scope.person.level++;
-          $scope.person.level = $scope.person.level % 4;
-        };
+      }
+    };
+  }
+
+  angular
+    .module( 'app' )
+    .directive( 'droidInfoCard', droidInfoCard )
+  ;
+  function droidInfoCard() {
+    return {
+      templateUrl: 'droidInfoCard.html',
+      restrict: 'E',
+      scope: {
+        droid: '=',
+        initialCollapsed: '@collapsed'
+      },
+      controller: function( $scope ) {
+
       }
     };
   }

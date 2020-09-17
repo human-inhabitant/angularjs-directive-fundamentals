@@ -1,10 +1,10 @@
-<div ng-show="!!user.address && !collapsed" ng-click="collapseAddress()">
+<div ng-show="!!person.address && !collapsed" ng-click="collapseAddress()">
   <h4>Address:</h4>
-  <div>{{user.address.street}}</div>
-  <div>{{user.address.city}}</div>
-  <div>{{user.address.planet}}</div>
+  <div>{{person.address.street}}</div>
+  <div>{{person.address.city}}</div>
+  <div>{{person.address.planet}}</div>
 </div>
-<div ng-show="!!user.address && collapsed" ng-click="expandAddress()">
+<div ng-show="!!person.address && collapsed" ng-click="expandAddress()">
   <h4>Address:</h4>
-  <div>{{user.address.planet}}...</div>
+  <div>{{person.address.planet}}...</div>
 </div>

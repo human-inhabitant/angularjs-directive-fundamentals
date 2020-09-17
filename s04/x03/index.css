@@ -40,3 +40,6 @@ textarea {
 .user-error {
   background-color: red;
 }
+.next-state {
+  float: right;
+}
