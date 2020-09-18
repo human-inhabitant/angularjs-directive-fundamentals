@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title></title>
+  </head>
+  <body class="container" ng-controller="mainCtrl">
+    <h3 class="well well-sm">Bounty Hunters</h3>
+    <div user-list="hunter in bountyHunters">
+      <span ng-bind="'Age: ' + hunter.age"></span>
+    </div>
+    <hr />
+    <button class="btn btn-xs" ng-click="add()">Add</button>
+    <button class="btn btn-xs" ng-click="remove()">Remove</button>
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
