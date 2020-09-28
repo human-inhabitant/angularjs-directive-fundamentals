@@ -4,10 +4,12 @@
   "description": "AngularJS Directives Fundamentals",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "angular": "^1.8.0",
+    "angular-animate": "^1.8.0",
+    "angular-ui-bootstrap": "^2.5.6",
     "bootstrap": "^3.4.1",
-    "jquery": "^1.12.4",
-    "angular": "^1.8.0"
+    "express": "^4.17.1",
+    "jquery": "^1.12.4"
   },
   "scripts": {
     "start": "nodemon app"

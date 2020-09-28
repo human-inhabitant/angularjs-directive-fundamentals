@@ -1,0 +1,52 @@
+/* 16px === 1rem */
+
+html, body {
+  font-family: "Source Code Pro", monospace;
+  padding: 0.625rem;
+}
+pre {
+  font-family: "Source Code Pro", monospace;
+  font-size: inherit;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+textarea {
+  resize: none;
+}
+:focus,
+.btn:focus,
+.btn:active:focus {
+  outline: 0;
+}
+
+.modal-blackout {
+  background-color: rgba( 0, 0, 0, 0.4 );
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+.modal-container {
+  background-color: rgba( 242, 242, 242, 0.8 );
+  border: 1px solid rgba( 255, 255, 255, 0.8 );
+  border-radius: 0.625rem;
+  box-shadow: 0 2px 7px rgba( 41, 41, 41, 0.8 );
+  padding: 1.25rem;
+  position: absolute;
+  z-index: 50;
+}
+.modal-close {
+  clear: both;
+  display: block;
+  float: right;
+  height: 3.125rem;
+  left: 3.125rem;
+  position: relative;
+  top: -1.125rem;
+  width: 3.125rem;
+}
+

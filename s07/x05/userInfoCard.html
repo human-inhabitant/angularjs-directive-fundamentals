@@ -1,0 +1,26 @@
+<div class="panel panel-info">
+  <div class="panel-heading" ng-click="vm.collapse()">{{vm.user.name}}</div>
+  <div class="panel-body" ng-hide="vm.collapsed">
+    <address></address>
+    <h4>Likes:</h4>
+    <ul>
+      <li ng-repeat='friend in vm.user.likes'>
+        {{friend.name}}
+        <remove-friend method="vm.removeFriend(friend)"></remove-friend>
+      </li>
+    </ul>
+    <h4>Is Liked By:</h4>
+    <ul>
+      <li ng-repeat='friend in vm.user.likedBy'>
+        {{friend.name}}
+      </li>
+    </ul>
+    <div ng-show="!!vm.user.rank">
+      <h4>Rank:</h4>
+      <ul>
+        <li>{{vm.user.rank}}</li>
+      </ul>
+    </div>
+    <button ng-show="!vm.user.rank" class="btn btn-xs btn-success" ng-click="vm.knightMe(vm.user)">Knight Me</button>
+  </div>
+</div>
